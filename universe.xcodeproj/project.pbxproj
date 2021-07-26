@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0109A7826AEDB2F003C349B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0109A7726AEDB2F003C349B /* SignUpViewController.swift */; };
+		F0109A7C26AEDCDB003C349B /* EmailAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0109A7B26AEDCDB003C349B /* EmailAuthenticationViewController.swift */; };
 		F019EDA526AC696D00A5003C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019EDA426AC696D00A5003C /* AppDelegate.swift */; };
 		F019EDA726AC696D00A5003C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019EDA626AC696D00A5003C /* SceneDelegate.swift */; };
-		F019EDA926AC696D00A5003C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019EDA826AC696D00A5003C /* ViewController.swift */; };
+		F019EDA926AC696D00A5003C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019EDA826AC696D00A5003C /* LoginViewController.swift */; };
 		F019EDAC26AC696D00A5003C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F019EDAA26AC696D00A5003C /* Main.storyboard */; };
 		F019EDAE26AC696F00A5003C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F019EDAD26AC696F00A5003C /* Assets.xcassets */; };
 		F019EDB126AC696F00A5003C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F019EDAF26AC696F00A5003C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F0109A7726AEDB2F003C349B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F0109A7B26AEDCDB003C349B /* EmailAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthenticationViewController.swift; sourceTree = "<group>"; };
 		F019EDA126AC696D00A5003C /* universe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = universe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F019EDA426AC696D00A5003C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F019EDA626AC696D00A5003C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F019EDA826AC696D00A5003C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F019EDA826AC696D00A5003C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F019EDAB26AC696D00A5003C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F019EDAD26AC696F00A5003C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F019EDB026AC696F00A5003C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +62,9 @@
 			children = (
 				F019EDA426AC696D00A5003C /* AppDelegate.swift */,
 				F019EDA626AC696D00A5003C /* SceneDelegate.swift */,
-				F019EDA826AC696D00A5003C /* ViewController.swift */,
+				F019EDA826AC696D00A5003C /* LoginViewController.swift */,
+				F0109A7726AEDB2F003C349B /* SignUpViewController.swift */,
+				F0109A7B26AEDCDB003C349B /* EmailAuthenticationViewController.swift */,
 				F019EDAA26AC696D00A5003C /* Main.storyboard */,
 				F019EDAD26AC696F00A5003C /* Assets.xcassets */,
 				F019EDAF26AC696F00A5003C /* LaunchScreen.storyboard */,
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F019EDA926AC696D00A5003C /* ViewController.swift in Sources */,
+				F019EDA926AC696D00A5003C /* LoginViewController.swift in Sources */,
 				F019EDA526AC696D00A5003C /* AppDelegate.swift in Sources */,
+				F0109A7C26AEDCDB003C349B /* EmailAuthenticationViewController.swift in Sources */,
+				F0109A7826AEDB2F003C349B /* SignUpViewController.swift in Sources */,
 				F019EDA726AC696D00A5003C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
