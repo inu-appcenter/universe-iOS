@@ -15,6 +15,7 @@
 		F019EDAC26AC696D00A5003C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F019EDAA26AC696D00A5003C /* Main.storyboard */; };
 		F019EDAE26AC696F00A5003C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F019EDAD26AC696F00A5003C /* Assets.xcassets */; };
 		F019EDB126AC696F00A5003C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F019EDAF26AC696F00A5003C /* LaunchScreen.storyboard */; };
+		F0BA398926B5920F00C3A3C3 /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F0BA398826B5920F00C3A3C3 /* LaunchScreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F019EDAD26AC696F00A5003C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F019EDB026AC696F00A5003C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F019EDB226AC696F00A5003C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0BA398826B5920F00C3A3C3 /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchScreen.png; path = ../../LaunchScreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,26 @@
 		F019EDA326AC696D00A5003C /* universe */ = {
 			isa = PBXGroup;
 			children = (
+				F0BA398826B5920F00C3A3C3 /* LaunchScreen.png */,
+				F0BA398726B58AD500C3A3C3 /* ViewController */,
 				F019EDA426AC696D00A5003C /* AppDelegate.swift */,
 				F019EDA626AC696D00A5003C /* SceneDelegate.swift */,
-				F019EDA826AC696D00A5003C /* LoginViewController.swift */,
-				F0109A7726AEDB2F003C349B /* SignUpViewController.swift */,
-				F0109A7B26AEDCDB003C349B /* EmailAuthenticationViewController.swift */,
 				F019EDAA26AC696D00A5003C /* Main.storyboard */,
 				F019EDAD26AC696F00A5003C /* Assets.xcassets */,
 				F019EDAF26AC696F00A5003C /* LaunchScreen.storyboard */,
 				F019EDB226AC696F00A5003C /* Info.plist */,
 			);
 			path = universe;
+			sourceTree = "<group>";
+		};
+		F0BA398726B58AD500C3A3C3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F019EDA826AC696D00A5003C /* LoginViewController.swift */,
+				F0109A7726AEDB2F003C349B /* SignUpViewController.swift */,
+				F0109A7B26AEDCDB003C349B /* EmailAuthenticationViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +143,7 @@
 			files = (
 				F019EDB126AC696F00A5003C /* LaunchScreen.storyboard in Resources */,
 				F019EDAE26AC696F00A5003C /* Assets.xcassets in Resources */,
+				F0BA398926B5920F00C3A3C3 /* LaunchScreen.png in Resources */,
 				F019EDAC26AC696D00A5003C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

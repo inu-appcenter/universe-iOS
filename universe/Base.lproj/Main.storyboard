@@ -20,29 +20,18 @@
                                 <rect key="frame" x="75" y="84" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pcS-F1-X9S">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID / E-mail Address" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="pcS-F1-X9S">
                                 <rect key="frame" x="33" y="346" width="324" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfu-mI-ID9">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="hfu-mI-ID9">
                                 <rect key="frame" x="33" y="388" width="324" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0c-he-xkz">
-                                <rect key="frame" x="33" y="468" width="324" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <state key="normal" title="회원가입">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="KB8-kc-swW" kind="presentation" modalPresentationStyle="fullScreen" id="oml-IC-dfq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpW-c3-KXz">
                                 <rect key="frame" x="33" y="430" width="324" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -50,19 +39,94 @@
                                 <state key="normal" title="로그인">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d5v-WN-cbN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0c-he-xkz">
+                                <rect key="frame" x="296" y="468" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="회원가입"/>
+                                <connections>
+                                    <segue destination="KB8-kc-swW" kind="presentation" modalPresentationStyle="fullScreen" id="oml-IC-dfq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="userId" destination="pcS-F1-X9S" id="JQk-UK-lsW"/>
-                        <outlet property="userPassword" destination="hfu-mI-ID9" id="M7E-LW-AHA"/>
+                        <outlet property="userIdTextField" destination="pcS-F1-X9S" id="Z7h-EP-E95"/>
+                        <outlet property="userPasswordTextField" destination="hfu-mI-ID9" id="03d-Xt-xz8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.76923076923077" y="115.87677725118483"/>
+        </scene>
+        <!--home-->
+        <scene sceneID="59S-cb-irL">
+            <objects>
+                <viewController id="KUP-WE-QAd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ka-g9-Edd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vzd-cb-q4U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="home" image="house.circle" catalog="system" id="hI4-3D-2N7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQL-3e-jnl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1875" y="116"/>
+        </scene>
+        <!--heart-->
+        <scene sceneID="F4M-ng-uAp">
+            <objects>
+                <viewController id="5WC-vl-oBn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Utx-sJ-UfE">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Wv5-pD-XZh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="heart" image="heart.circle" catalog="system" id="gyU-rI-efg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nnu-8O-XVo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762" y="116"/>
+        </scene>
+        <!--chat-->
+        <scene sceneID="6ko-ab-dOf">
+            <objects>
+                <viewController id="Shg-1x-7BU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cku-i9-csd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Dy9-73-Nwa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="chat" image="message.circle" catalog="system" id="SdG-ee-mRz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M5B-WB-9uF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3637" y="116"/>
+        </scene>
+        <!--프로필-->
+        <scene sceneID="qqC-CT-h12">
+            <objects>
+                <viewController id="Nl6-GJ-7Nn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1np-Mz-0tx">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2yA-Bd-gBj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="프로필" image="person.circle" catalog="system" id="vY1-gv-DSm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHl-uw-xIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4494" y="116"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="O8w-XV-iSF">
@@ -82,13 +146,13 @@
                                 <rect key="frame" x="36" y="398" width="318" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TaZ-yZ-gBJ">
                                 <rect key="frame" x="36" y="440" width="318" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFh-xC-pcA">
                                 <rect key="frame" x="274" y="359" width="65" height="29"/>
@@ -187,10 +251,35 @@
             </objects>
             <point key="canvasLocation" x="130.76923076923077" y="1491.4691943127962"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="a92-xX-WnI">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="R66-TH-yTX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q13-Ms-kFJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KUP-WE-QAd" kind="relationship" relationship="viewControllers" id="Mo8-w6-3Cb"/>
+                        <segue destination="5WC-vl-oBn" kind="relationship" relationship="viewControllers" id="tfn-OV-pEO"/>
+                        <segue destination="Shg-1x-7BU" kind="relationship" relationship="viewControllers" id="7Ri-v6-2S5"/>
+                        <segue destination="Nl6-GJ-7Nn" kind="relationship" relationship="viewControllers" id="Muf-cl-kV8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hU-KI-73v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762" y="-669"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="heart.circle" catalog="system" width="128" height="121"/>
+        <image name="house.circle" catalog="system" width="128" height="121"/>
+        <image name="message.circle" catalog="system" width="128" height="121"/>
         <image name="noname" width="300" height="200"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
