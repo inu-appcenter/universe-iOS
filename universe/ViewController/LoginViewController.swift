@@ -8,6 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    //키보드 올라올때 이메일,비밀번호 입력, 로그인 버튼 등 다 올라오게 만들어야함
     /*
      MVVM Design Pattern
      
