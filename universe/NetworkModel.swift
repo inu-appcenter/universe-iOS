@@ -8,12 +8,11 @@
 import UIKit
 import Alamofire
 
-let header: HTTPHeaders = []
+let config = URLSessionConfiguration.default
+let session = URLSession(configuration: config)
 
-let jsonheader: HTTPHeaders = [ "Content-Type": "application/json" ]
-
-class NetworkModel {
-    let BASE_URL = "http://ec2-13-124-191-131.ap-northeast-2.compute.amazonaws.com:8080"
+struct NetworkModel {
+    let BASE_URL = URL(string: "http://ec2-13-124-191-131.ap-northeast-2.compute.amazonaws.com:8080")
     
     func isSuccess(statusCode code: Int) -> Bool {
         switch code {

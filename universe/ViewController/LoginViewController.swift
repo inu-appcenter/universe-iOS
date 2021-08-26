@@ -80,7 +80,7 @@ class LoginViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         guard let email = userIdTextField.text, !email.isEmpty else {
-            simpleAlert(title: "", message: "E-mail을 입력해주세요.")
+            simpleAlert(title: "", message: "e-mail을 입력해주세요.")
             return
             
         }
@@ -126,6 +126,7 @@ class LoginViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     //MARK: - UIGestureRecognizerDelegate
+    //화면에서 다른 곳 터치하면 키보드 내려가게
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         if(touch.view?.isDescendant(of: userIdTextField) == true) {
             return false

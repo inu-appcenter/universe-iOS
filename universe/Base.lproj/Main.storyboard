@@ -536,6 +536,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="nextButtonTapped:" destination="KB8-kc-swW" eventType="touchUpInside" id="V5Q-07-bpZ"/>
                                     <segue destination="czF-wS-wTS" kind="presentation" modalPresentationStyle="fullScreen" id="7u6-XN-zjq"/>
                                 </connections>
                             </button>

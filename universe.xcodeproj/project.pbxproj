@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,8 @@
 		F02B3ECC26BFE0A900A4C540 /* launchMainLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F02B3ECB26BFE0A900A4C540 /* launchMainLogo.png */; };
 		F02B3ECE26BFE0B200A4C540 /* launchMainTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = F02B3ECD26BFE0B200A4C540 /* launchMainTitle.png */; };
 		F02B3ED026BFE0B800A4C540 /* launchSubTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = F02B3ECF26BFE0B800A4C540 /* launchSubTitle.png */; };
+		F03FC1A526D73A45008AD030 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03FC1A426D73A45008AD030 /* UserModel.swift */; };
+		F03FC1A826D765BD008AD030 /* request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03FC1A726D765BD008AD030 /* request.swift */; };
 		F0951D0526D28D7D00AFE142 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0951D0426D28D7D00AFE142 /* NetworkModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		F02B3ECB26BFE0A900A4C540 /* launchMainLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchMainLogo.png; path = "../../런치스크린/launchMainLogo.png"; sourceTree = "<group>"; };
 		F02B3ECD26BFE0B200A4C540 /* launchMainTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchMainTitle.png; path = "../../런치스크린/launchMainTitle.png"; sourceTree = "<group>"; };
 		F02B3ECF26BFE0B800A4C540 /* launchSubTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchSubTitle.png; path = "../../런치스크린/launchSubTitle.png"; sourceTree = "<group>"; };
+		F03FC1A426D73A45008AD030 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F03FC1A726D765BD008AD030 /* request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = request.swift; sourceTree = "<group>"; };
 		F0951D0426D28D7D00AFE142 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		F589AD1134A9EFE37943D84A /* Pods-universe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-universe.debug.xcconfig"; path = "Target Support Files/Pods-universe/Pods-universe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,7 +70,6 @@
 				F589AD1134A9EFE37943D84A /* Pods-universe.debug.xcconfig */,
 				8AF2716BC393D49EA0DB52AD /* Pods-universe.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,6 +94,7 @@
 		F019EDA326AC696D00A5003C /* universe */ = {
 			isa = PBXGroup;
 			children = (
+				F03FC1A626D7581D008AD030 /* Network */,
 				F0BA398726B58AD500C3A3C3 /* ViewController */,
 				F019EDA426AC696D00A5003C /* AppDelegate.swift */,
 				F019EDA626AC696D00A5003C /* SceneDelegate.swift */,
@@ -104,8 +108,17 @@
 				F019EDAF26AC696F00A5003C /* LaunchScreen.storyboard */,
 				F019EDB226AC696F00A5003C /* Info.plist */,
 				F0951D0426D28D7D00AFE142 /* NetworkModel.swift */,
+				F03FC1A426D73A45008AD030 /* UserModel.swift */,
 			);
 			path = universe;
+			sourceTree = "<group>";
+		};
+		F03FC1A626D7581D008AD030 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F03FC1A726D765BD008AD030 /* request.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		F0BA398726B58AD500C3A3C3 /* ViewController */ = {
@@ -248,10 +261,12 @@
 				F0951D0526D28D7D00AFE142 /* NetworkModel.swift in Sources */,
 				F019EDA926AC696D00A5003C /* LoginViewController.swift in Sources */,
 				F020508126D2778B00F3A97B /* PeopleWhoIWantViewController.swift in Sources */,
+				F03FC1A826D765BD008AD030 /* request.swift in Sources */,
 				F019EDA526AC696D00A5003C /* AppDelegate.swift in Sources */,
 				F0109A7C26AEDCDB003C349B /* EmailAuthenticationViewController.swift in Sources */,
 				F02B3E8526BFC52400A4C540 /* DeviceConfig.swift in Sources */,
 				F0109A7826AEDB2F003C349B /* SignUpViewController.swift in Sources */,
+				F03FC1A526D73A45008AD030 /* UserModel.swift in Sources */,
 				F019EDA726AC696D00A5003C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

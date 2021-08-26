@@ -8,25 +8,19 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-    // 각 사용자의 이메일과 패스워드 저장은 어떻게?
-    
-    /*
-     MVVM Design Pattern
-     
-     Model
-     -
-     
-     
-     View
-     -
-     
-     
-     ViewModel
-     -
-     */
     @IBOutlet weak var userIdTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var userPasswordCheckTextField: UITextField!
+    
+    let networkModel = NetworkModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        userIdTextField.addTarget(self, action: #selector(didEndOnExit), for: UIControl.Event.editingDidEndOnExit)
+        userPasswordTextField.addTarget(self, action: #selector(didEndOnExit), for: UIControl.Event.editingDidEndOnExit)
+        userPasswordCheckTextField.addTarget(self, action: #selector(didEndOnExit), for: UIControl.Event.editingDidEndOnExit)
+    }
     
     @objc func didEndOnExit(_ sender: UITextField) {
         if userIdTextField.isFirstResponder {
@@ -36,12 +30,36 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        guard let email = userIdTextField.text, !email.isEmpty else {
+            simpleAlert(title: "", message: "e-mail을 입력해주세요.")
+            return
+        }
+        guard let password = userPasswordTextField.text, !password.isEmpty else {
+            simpleAlert(title: "", message: "비밀번호를 입력해주세요.")
+            return
+        }
+        guard let passwordCheck = userPasswordCheckTextField.text, !passwordCheck.isEmpty else {
+            simpleAlert(title: "", message: "비밀번호확인을 입력해주세요.")
+            return
+        }
+        //이메일 형식검사 만들기
+        if password.count < 6 {
+            simpleAlert(title: "", message: "비밀번호를 6자리 이상 입력해주세요.")
+        }
+        if password != passwordCheck {
+            simpleAlert(title: "", message: "비밀번호를 동일하게 입력해주세요.")
+        }
         
-        userIdTextField.addTarget(self, action: #selector(didEndOnExit), for: UIControl.Event.editingDidEndOnExit)
-        userPasswordTextField.addTarget(self, action: #selector(didEndOnExit), for: UIControl.Event.editingDidEndOnExit)
-        userPasswordCheckTextField.addTarget(self, action: #selector(didEndOnExit), for: UIControl.Event.editingDidEndOnExit)
+        
+    }
+    
+    func simpleAlert(title: String, message msg: String) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 
     //뒤로가기 버튼
