@@ -24,9 +24,28 @@ class SignUpViewController: UIViewController {
      ViewModel
      -
      */
+    @IBOutlet weak var userIdTextField: UITextField!
+    @IBOutlet weak var userPasswordTextField: UITextField!
+    @IBOutlet weak var userPasswordCheckTextField: UITextField!
+    
+    @objc func didEndOnExit(_ sender: UITextField) {
+        if userIdTextField.isFirstResponder {
+            userPasswordTextField.becomeFirstResponder()
+        } else if userPasswordTextField.isFirstResponder {
+            userPasswordCheckTextField.becomeFirstResponder()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        userIdTextField.addTarget(self, action: #selector(didEndOnExit), for: UIControl.Event.editingDidEndOnExit)
+        userPasswordTextField.addTarget(self, action: #selector(didEndOnExit), for: UIControl.Event.editingDidEndOnExit)
+        userPasswordCheckTextField.addTarget(self, action: #selector(didEndOnExit), for: UIControl.Event.editingDidEndOnExit)
     }
 
+    //뒤로가기 버튼
+    @IBAction func touchUpDismissButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 }

@@ -5,6 +5,7 @@
 //  Created by 은구 on 2021/08/08.
 //
 
+//네트워크 연결감지
 import Foundation
 import SystemConfiguration
 

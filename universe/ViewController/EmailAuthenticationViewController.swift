@@ -14,5 +14,9 @@ class EmailAuthenticationViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    @IBAction func touchUpDismissButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 
 }

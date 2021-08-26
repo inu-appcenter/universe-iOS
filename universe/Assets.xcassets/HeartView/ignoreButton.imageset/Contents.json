@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ignoreButton.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
