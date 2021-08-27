@@ -12,7 +12,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var userPasswordCheckTextField: UITextField!
     
-    let networkModel = NetworkModel()
+    var userModel = UserModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +50,8 @@ class SignUpViewController: UIViewController {
         if password != passwordCheck {
             simpleAlert(title: "", message: "비밀번호를 동일하게 입력해주세요.")
         }
+        
+        userModel.createUser(email: email, password: password, passwordCheck: passwordCheck)
         
         request("http://ec2-13-124-191-131.ap-northeast-2.compute.amazonaws.com:8080/email", "POST", ["address": email]) { (success, data) in
             print(data)

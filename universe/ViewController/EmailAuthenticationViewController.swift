@@ -8,9 +8,9 @@
 import UIKit
 
 class EmailAuthenticationViewController: UIViewController {
-    // 이메일 인증과 시간내 인증번호 입력 구현은 어떻게?
 
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var authenticationNumberTextField: UITextField!
     
     var timer = Timer()
     var seconds = 240
@@ -52,4 +52,7 @@ class EmailAuthenticationViewController: UIViewController {
         return "\(minuteStamp):\(secondStamp)"
     }
     
+    @IBAction func okButtonTapped(_ sender: Any) {
+        
+    }
 }

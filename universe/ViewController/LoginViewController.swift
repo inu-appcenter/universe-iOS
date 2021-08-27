@@ -145,6 +145,7 @@ class LoginViewController: UIViewController, UIGestureRecognizerDelegate {
         
     }
     
+    /*
     func loginMethod(id: String, password: String) {
         var request = URLRequest(url: URL(string: "http://ec2-13-124-191-131.ap-northeast-2.compute.amazonaws.com:8080/")!)
         request.httpMethod = "POST"
@@ -157,9 +158,11 @@ class LoginViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         URLSession.shared.dataTask(with: request) { (data, response, error) in }
     }
+ */
     
 }
 
+/*
 final class UserModel {
     struct User {
         var email: String
@@ -172,7 +175,7 @@ final class UserModel {
     
     
 }
-
+*/
 
 struct LoginInfo {
     let id: String

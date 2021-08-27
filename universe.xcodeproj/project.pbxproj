@@ -108,7 +108,6 @@
 				F019EDAF26AC696F00A5003C /* LaunchScreen.storyboard */,
 				F019EDB226AC696F00A5003C /* Info.plist */,
 				F0951D0426D28D7D00AFE142 /* NetworkModel.swift */,
-				F03FC1A426D73A45008AD030 /* UserModel.swift */,
 			);
 			path = universe;
 			sourceTree = "<group>";
@@ -116,6 +115,7 @@
 		F03FC1A626D7581D008AD030 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F03FC1A426D73A45008AD030 /* UserModel.swift */,
 				F03FC1A726D765BD008AD030 /* request.swift */,
 			);
 			path = Network;
