@@ -12,8 +12,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var userPasswordCheckTextField: UITextField!
     
-    var userModel = UserModel()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,9 +49,9 @@ class SignUpViewController: UIViewController {
             simpleAlert(title: "", message: "비밀번호를 동일하게 입력해주세요.")
         }
         
-        userModel.createUser(email: email, password: password, passwordCheck: passwordCheck)
+        userData = UserData(email: email, password: password, passwordCheck: passwordCheck)
         
-        request("http://ec2-13-124-191-131.ap-northeast-2.compute.amazonaws.com:8080/email", "POST", ["address": email]) { (success, data) in
+        request("http://ec2-13-124-191-131.ap-northeast-2.compute.amazonaws.com:8080/email", "POST", ["address": userData.email]) { (success, data) in
             print(data)
         }
     }

@@ -44,6 +44,7 @@ func requestPost(url: String, method: String, param: [String: Any], completionHa
             print("Error: HTTP request failed")
             return
         }
+        
         guard let output = try? JSONDecoder().decode(Response.self, from: data) else {
             print("Error: JSON Data Parsing failed")
             return

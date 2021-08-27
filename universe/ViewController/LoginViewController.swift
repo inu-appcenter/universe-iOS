@@ -162,7 +162,7 @@ class LoginViewController: UIViewController, UIGestureRecognizerDelegate {
     
 }
 
-/*
+
 final class UserModel {
     struct User {
         var email: String
@@ -175,7 +175,7 @@ final class UserModel {
     
     
 }
-*/
+
 
 struct LoginInfo {
     let id: String
