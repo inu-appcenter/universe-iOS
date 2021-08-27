@@ -51,7 +51,9 @@ class SignUpViewController: UIViewController {
             simpleAlert(title: "", message: "비밀번호를 동일하게 입력해주세요.")
         }
         
-        
+        request("http://ec2-13-124-191-131.ap-northeast-2.compute.amazonaws.com:8080/email", "POST", ["address": email]) { (success, data) in
+            print(data)
+        }
     }
     
     func simpleAlert(title: String, message msg: String) {
